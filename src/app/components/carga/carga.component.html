@@ -1,1 +1,37 @@
-<p>carga works!</p>
+<div class="row">
+    <div class="col-md-4">
+        <h3>Seleccione archivos</h3>
+        <div appNgDropFiles (mouseSobre)="estaSobreElemento = $event" [ngClass]="{ 'file-over': estaSobreElemento }" class="well drop-zone">
+            <h4>Drop here</h4>
+            <img src="assets/drop-images.png" style='width: 80px' class="mb-4">
+        </div>
+    </div>
+    <div class="col-md-8">
+        <h4>Cargar Archivos</h4>
+
+        <button class="btn btn-success" (click)='cargarImagenes()' [disabled]='archivos.length === 0'>Subir a firebase</button>
+        <button class="btn btn-danger">Limpiar</button>
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre archivo</th>
+                    <th>Tamaño</th>
+                    <th>Progreso</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td>xyz</td>
+                    <td>12mb</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%"></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
