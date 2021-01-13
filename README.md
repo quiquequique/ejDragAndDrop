@@ -1,5 +1,5 @@
 # ejDragAndDrop
-## Drag drop and upload images and docs using angular 10
+## Drag drop and upload images and docs using angular 
 ## drag and drop
 ## firebase upload 
 ## validaciones de archivos repetidos y tipo img
